@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alsafadi Food Production - User</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header-box">
+    <h1>Alsafadi Food Production - Your Bookings</h1>
+  </div>
+
+  <div class="container">
+    <form id="bookingForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="room">Select Room:</label>
+      <select id="room" required>
+        <option value="" disabled selected>-- Select Room --</option>
+        <option value="Room 1">Room 1</option>
+        <option value="Room 2">Room 2</option>
+        <option value="Room 3 (with Audio/Video)">Room 3 (with Audio/Video)</option>
+      </select>
+
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" required>
+
+      <label for="startTime">Start Time:</label>
+      <input type="time" id="startTime" required>
+
+      <label for="endTime">End Time:</label>
+      <input type="time" id="endTime" required>
+
+      <label for="description">Description:</label>
+      <textarea id="description" placeholder="Optional: Add meeting details"></textarea>
+
+      <button type="submit">Book Room</button>
+    </form>
+
+    <div id="message" class="message"></div>
+
+    <table id="bookingsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Room</th>
+          <th>Date</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <button onclick="logout()" style="margin:20px;">Logout</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
